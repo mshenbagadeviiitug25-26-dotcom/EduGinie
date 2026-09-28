@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {{ app_name }} - AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="container">
+
+        <div class="brand">
+            EduGenie
+        </div>
+
+        <h1>
+            Your AI-powered learning assistant
+        </h1>
+
+        <p>
+            Ask questions, understand difficult concepts,
+            generate quizzes, summarize study material,
+            and create personalized learning paths.
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="container main-content">
+
+
+    <!-- INPUT CARD -->
+
+    <section class="card">
+
+        <form id="task-form">
+
+            <label for="task">
+                Choose a learning task
+            </label>
+
+            <select
+                id="task"
+                name="task"
+            >
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Concept
+                </option>
+
+                <option value="quiz">
+                    Generate Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize Text
+                </option>
+
+                <option value="learn">
+                    Learning Path
+                </option>
+
+            </select>
+
+
+            <label for="input-text">
+                Your input
+            </label>
+
+            <textarea
+                id="input-text"
+                name="text"
+                rows="10"
+                maxlength="12000"
+                required
+                placeholder="Example: Explain the Pythagoras theorem in simple words."
+            ></textarea>
+
+
+            <div class="actions">
+
+                <button
+                    type="submit"
+                    id="submit-btn"
+                >
+
+                    <span id="button-text">
+                        Generate
+                    </span>
+
+                    <span
+                        id="spinner"
+                        class="spinner hidden"
+                    ></span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="secondary"
+                    id="clear-btn"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- RESULT CARD -->
+
+    <section class="card result-card">
+
+        <div class="result-header">
+
+            <h2>
+                Result
+            </h2>
+
+            <span
+                id="status"
+                class="status"
+            >
+                Ready
+            </span>
+
+        </div>
+
+
+        <div
+            id="result"
+            class="result"
+        >
+
+            <p class="muted">
+                Your AI-generated result will appear here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        EduGenie • FastAPI + Google Gemini
+
+    </div>
+
+</footer>
+
+
+<script
+    src="{{ url_for('static', path='/app.js') }}"
+></script>
+
+</body>
+
+</html>

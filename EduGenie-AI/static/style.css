@@ -1,0 +1,534 @@
+:root {
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #172033;
+
+    background: #f5f7fb;
+
+    line-height: 1.6;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: #f5f7fb;
+}
+
+
+/* -----------------------------
+   COMMON CONTAINER
+----------------------------- */
+
+.container {
+
+    width: min(
+        1100px,
+        calc(100% - 32px)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* -----------------------------
+   HERO
+----------------------------- */
+
+.hero {
+
+    padding:
+        70px
+        0
+        70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #4338ca
+        );
+
+    color: white;
+}
+
+
+.brand {
+
+    font-size: 1.2rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+
+    max-width: 800px;
+
+    margin: 0;
+
+    font-size:
+        clamp(
+            2.2rem,
+            6vw,
+            4.5rem
+        );
+
+    line-height: 1.05;
+}
+
+
+.hero p {
+
+    max-width: 720px;
+
+    margin-top: 25px;
+
+    font-size: 1.1rem;
+
+    opacity: 0.92;
+}
+
+
+/* -----------------------------
+   MAIN
+----------------------------- */
+
+.main-content {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 24px;
+
+    margin-top: -30px;
+
+    padding-bottom: 60px;
+}
+
+
+/* -----------------------------
+   CARD
+----------------------------- */
+
+.card {
+
+    background: white;
+
+    border:
+        1px solid
+        #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(
+            15,
+            23,
+            42,
+            0.08
+        );
+}
+
+
+/* -----------------------------
+   FORM
+----------------------------- */
+
+label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+
+select,
+textarea {
+
+    width: 100%;
+
+    border:
+        1px solid
+        #d1d5db;
+
+    border-radius: 12px;
+
+    padding: 13px 14px;
+
+    font: inherit;
+
+    background: white;
+
+    margin-bottom: 20px;
+}
+
+
+textarea {
+
+    min-height: 230px;
+
+    resize: vertical;
+}
+
+
+select:focus,
+textarea:focus {
+
+    outline:
+        3px solid
+        rgba(
+            79,
+            70,
+            229,
+            0.15
+        );
+
+    border-color:
+        #6366f1;
+}
+
+
+/* -----------------------------
+   BUTTONS
+----------------------------- */
+
+.actions {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding:
+        12px
+        20px;
+
+    font: inherit;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    background: #4f46e5;
+
+    color: white;
+}
+
+
+button:hover {
+
+    filter: brightness(0.95);
+}
+
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+button.secondary {
+
+    background: #eef2ff;
+
+    color: #3730a3;
+}
+
+
+/* -----------------------------
+   RESULT
+----------------------------- */
+
+.result-card {
+
+    min-height: 450px;
+}
+
+
+.result-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.result-header h2 {
+
+    margin: 0;
+}
+
+
+.status {
+
+    background: #ecfdf5;
+
+    color: #047857;
+
+    border-radius: 999px;
+
+    padding:
+        5px
+        12px;
+
+    font-size: 0.85rem;
+}
+
+
+.status.error {
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+}
+
+
+.muted {
+
+    color: #6b7280;
+}
+
+
+.answer {
+
+    white-space: pre-wrap;
+
+    line-height: 1.8;
+}
+
+
+/* -----------------------------
+   QUIZ
+----------------------------- */
+
+.quiz-question {
+
+    border:
+        1px solid
+        #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 16px;
+}
+
+
+.quiz-question h3 {
+
+    margin-top: 0;
+}
+
+
+.quiz-option {
+
+    padding:
+        9px
+        12px;
+
+    margin:
+        7px
+        0;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+}
+
+
+.correct {
+
+    border-left:
+        4px solid
+        #059669;
+
+    padding-left: 12px;
+}
+
+
+/* -----------------------------
+   LEARNING PATH
+----------------------------- */
+
+.learning-step {
+
+    border-left:
+        4px solid
+        #4f46e5;
+
+    padding:
+        12px
+        18px;
+
+    margin:
+        16px
+        0;
+
+    background: #f8fafc;
+
+    border-radius:
+        0
+        10px
+        10px
+        0;
+}
+
+
+.learning-step h3 {
+
+    margin-top: 0;
+}
+
+
+/* -----------------------------
+   LOADING
+----------------------------- */
+
+.spinner {
+
+    display: inline-block;
+
+    width: 16px;
+
+    height: 16px;
+
+    border:
+        2px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.5
+        );
+
+    border-top-color:
+        white;
+
+    border-radius: 50%;
+
+    animation:
+        spin
+        0.8s
+        linear
+        infinite;
+
+    vertical-align: -3px;
+
+    margin-left: 6px;
+}
+
+
+.hidden {
+
+    display: none;
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* -----------------------------
+   FOOTER
+----------------------------- */
+
+footer {
+
+    padding: 25px 0;
+
+    background: #111827;
+
+    color: #9ca3af;
+
+    font-size: 0.9rem;
+}
+
+
+/* -----------------------------
+   MOBILE
+----------------------------- */
+
+@media (
+    max-width: 800px
+) {
+
+    .main-content {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero {
+
+        padding:
+            45px
+            0
+            55px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 2.5rem;
+    }
+
+
+    .actions {
+
+        flex-direction: column;
+    }
+
+
+    button {
+
+        width: 100%;
+    }
+}
